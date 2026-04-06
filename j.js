@@ -16,9 +16,9 @@ function generateGrid(dimension) {
     }
   }
 }
-generateGrid(16); //set default size.
+generateGrid(16); //initial size
 
-const sizePromptButton = document.querySelector("#sizePromptButton"); //works, but we gotta delete previous grid first.
+const sizePromptButton = document.querySelector("#sizePromptButton");
 sizePromptButton.addEventListener("click", () => {
   generateGrid(prompt("Enter a number 1 through 100"));
 });
