@@ -1,15 +1,18 @@
 const container = document.querySelector(".container");
 
-function generateGrid(length) {
-  for (let h = 0; h < length; h++) {
-    for (let l = 0; l < length; l++) {
+function generateGrid(dimension) {
+  let boxLength = 960 / dimension;
+  for (let hDim = 0; hDim < dimension; hDim++) {
+    for (let lDim = 0; lDim < dimension; lDim++) {
       const cell = document.createElement("div");
-      cell.setAttribute(
-        "style",
-        "background-color: black; width: 50px; height: 50px; margin: 5px;",
-      );
+      cell.style.backgroundColor = "black";
+      cell.style.boxSizing = "border-box";
+      cell.style.border = "2px solid white";
+      cell.style.borderColor = "white";
+      cell.style.width = `${boxLength}px`;
+      cell.style.height = `${boxLength}px`;
       container.appendChild(cell);
     }
   }
 }
-generateGrid(12);
+generateGrid(16);
