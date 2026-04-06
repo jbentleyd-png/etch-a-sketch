@@ -28,6 +28,11 @@ sizePromptButton.addEventListener("click", () => {
   let inputDim;
   do {
     inputDim = Number(prompt("Enter a whole number 1 through 100"));
-  } while (inputDim > 100 || inputDim < 1 || isNaN(inputDim));
+  } while (
+    inputDim > 100 ||
+    inputDim < 1 ||
+    isNaN(inputDim) ||
+    !Number.isInteger(inputDim)
+  );
   generateGrid(inputDim);
 });
