@@ -25,5 +25,9 @@ generateGrid(16); //initial size
 
 const sizePromptButton = document.querySelector("#sizePromptButton");
 sizePromptButton.addEventListener("click", () => {
-  generateGrid(prompt("Enter a number 1 through 100"));
+  let inputDim;
+  do {
+    inputDim = Number(prompt("Enter a whole number 1 through 100"));
+  } while (inputDim > 100 || inputDim < 1 || isNaN(inputDim));
+  generateGrid(inputDim);
 });
