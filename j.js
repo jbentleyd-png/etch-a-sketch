@@ -12,6 +12,11 @@ function generateGrid(dimension) {
       cell.style.borderColor = "white";
       cell.style.width = `${boxLength}px`;
       cell.style.height = `${boxLength}px`;
+
+      cell.addEventListener("mouseenter", () => {
+        cell.style.backgroundColor = "blue";
+      });
+
       container.appendChild(cell);
     }
   }
