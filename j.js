@@ -7,7 +7,7 @@ function generateGrid(dimension) {
       const cell = document.createElement("div");
       cell.style.backgroundColor = "black";
       cell.style.boxSizing = "border-box";
-      cell.style.border = "2px solid white";
+      cell.style.border = "1px solid white";
       cell.style.borderColor = "white";
       cell.style.width = `${boxLength}px`;
       cell.style.height = `${boxLength}px`;
@@ -15,4 +15,9 @@ function generateGrid(dimension) {
     }
   }
 }
-generateGrid(16);
+generateGrid(16); //set default size.
+
+const sizePromptButton = document.querySelector("#sizePromptButton"); //works, but we gotta delete previous grid first.
+sizePromptButton.addEventListener("click", () => {
+  generateGrid(prompt("Enter a number 1 through 100"));
+});
