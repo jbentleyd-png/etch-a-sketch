@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 
 function generateGrid(dimension) {
+  container.replaceChildren(); //removes all previous children.
   let boxLength = 960 / dimension;
   for (let hDim = 0; hDim < dimension; hDim++) {
     for (let lDim = 0; lDim < dimension; lDim++) {
