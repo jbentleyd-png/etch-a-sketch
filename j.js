@@ -36,3 +36,7 @@ sizePromptButton.addEventListener("click", () => {
   );
   generateGrid(inputDim);
 });
+
+alert(
+  "Welcome! This program will not work without a mouse and a pretty big screen. Mobile users, please return whence ye came.",
+);
